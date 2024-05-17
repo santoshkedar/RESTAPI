@@ -37,7 +37,7 @@ public class StepDefination extends Utils
 	{	
 		//create Request body for add request
 		//requestSpecification() method created to build request for common parameters 
-		
+	
 		requestBody= given().spec(requestSpecification()).body(bodyJson.addPlacePayload(name,language,address));
 	}
 	
@@ -89,6 +89,7 @@ public class StepDefination extends Utils
 	@Given("DeletePlaceAPI Payload")
 	public void delete_place_api_payload() throws IOException 
 	{
+		// 
 		requestBody= given().spec(requestSpecification()).body(bodyJson.deleteAPIBody(place_id));
 	}
 	
@@ -96,8 +97,7 @@ public class StepDefination extends Utils
 	public void create_location_payload_with(String locationName, String type, String dimension) throws IOException 
 	{
 		requestBody= given().spec(requestSpecificationGraphQL()).body(bodyJson.addLocationPayload(locationName,type,dimension));
-		
-		//Reused method 
+
 	}
 		
 	@Then("the locationID is created")
@@ -111,8 +111,6 @@ public class StepDefination extends Utils
 	{
 			
 		requestBody= given().spec(requestSpecificationGraphQL()).body(bodyJson.queryLocationPayload(location_id));
-		
-		//Reused method 
 		
 		user_call_with_http_request(resource,"POST");
 		
@@ -141,8 +139,6 @@ public class StepDefination extends Utils
 	public void verify_character_id_created_maps_to_using(String expectedName, String expectedType, String expectedStatus, String resource) throws IOException 
 	{
 		requestBody= given().spec(requestSpecificationGraphQL()).body(bodyJson.queryCharacterPayload(character_ID));
-		
-		//Reused method 
 		
 		user_call_with_http_request(resource,"POST");
 		
@@ -173,8 +169,6 @@ public class StepDefination extends Utils
 		
 		requestBody= given().spec(requestSpecificationGraphQL()).body(bodyJson.queryEpisodeIDPayload(episode_ID));
 		
-		//Reused method 
-		
 		user_call_with_http_request(resource,"POST");
 		
 		String actualName = getJsonPath(response, "data.episode.name");
@@ -187,8 +181,6 @@ public class StepDefination extends Utils
 	@Given("Delete Location GraphQL Payload")
 	public void delete_location_graph_ql_payload() throws IOException 
 	{
-		//{"query":"mutation {\n  deleteLocations(locationIds:[9144])\n  {\n    locationsDeleted\n  }\n}\n","variables":null}
-		
 		requestBody= given().spec(requestSpecificationGraphQL()).body(bodyJson.deleteLocationBody(location_id));
 	}
 	
@@ -203,6 +195,5 @@ public class StepDefination extends Utils
 	{
 		requestBody= given().spec(requestSpecificationGraphQL()).body(bodyJson.deleteEpisodeBody(episode_ID));
 	}
-	
 	
 }
