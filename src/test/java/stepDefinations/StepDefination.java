@@ -15,6 +15,7 @@ import static org.junit.Assert.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import resources.APIResources;
 import resources.TestDataBuild;
@@ -27,7 +28,8 @@ public class StepDefination extends Utils
 	Response response;
 	TestDataBuild bodyJson = new TestDataBuild();
 	JsonPath js;
-	static String place_id;
+	static int place_id_count=0;
+	static ArrayList<String> place_id = new ArrayList<String>();
 	static String location_id;
 	static String character_ID;
 	static String episode_ID;
@@ -72,9 +74,11 @@ public class StepDefination extends Utils
 	{
 		// Get the place id using getJsonPath method
 				
-		place_id = getJsonPath(response, "place_id");
-				
-		requestBody= given().spec(requestSpecification()).queryParam("place_id", place_id);
+		place_id.add(getJsonPath(response, "place_id"));
+		
+		requestBody= given().spec(requestSpecification()).queryParam("place_id", place_id.get(place_id_count));
+			
+		place_id_count++;
 		
 		//Reused method 
 		
@@ -89,8 +93,14 @@ public class StepDefination extends Utils
 	@Given("DeletePlaceAPI Payload")
 	public void delete_place_api_payload() throws IOException 
 	{
-		// 
-		requestBody= given().spec(requestSpecification()).body(bodyJson.deleteAPIBody(place_id));
+		int j=place_id.size();
+		for(int i=0;i<j-1;i++)
+			{
+				requestBody= given().spec(requestSpecification()).body(bodyJson.deleteAPIBody(place_id.get(0)));
+				user_call_with_http_request("DeletePlaceAPI","POST");
+				place_id.remove(0);
+			}
+		requestBody= given().spec(requestSpecification()).body(bodyJson.deleteAPIBody(place_id.get(0)));
 	}
 	
 	@Given("Create location Payload with {string} {string} {string}")

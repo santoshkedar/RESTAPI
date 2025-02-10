@@ -11,7 +11,10 @@ Scenario Outline: Verify whether Place is being successfully added using AddPlac
 	Examples:
 	|name     |language  |address      |
 	|Santosh  | Marathi  |Pune India   |
-#|Kedar    | English  |Mumbai India |
+  |Kedar    | English  |Mumbai India |
+##  |Virag    | Hindi    |Thane India  |
+##  |Smita    | English  |Beed  India  |
+##  |Raman    | English  |Satara India |    
 
 @DeletePlace @Regression
 Scenario: Verify if Delete Place API is working successfully

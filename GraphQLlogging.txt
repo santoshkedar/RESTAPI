@@ -15,7 +15,7 @@ Body:
     "variables": null
 }
 HTTP/1.1 200 OK
-Date: Thu, 16 May 2024 01:32:52 GMT
+Date: Thu, 30 Jan 2025 02:48:39 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
@@ -31,15 +31,15 @@ X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: no-referrer
 X-XSS-Protection: 0
 Content-Type: application/json; charset=utf-8
-Content-Length: 39
-ETag: W/"27-KVMpJakar0P5+xcvhTP9uezjFsI"
+Content-Length: 40
+ETag: W/"28-RphjG5eJDtwFhxUkfAyGotwZjCY"
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "data": {
         "createLocation": {
-            "id": 9205
+            "id": 17628
         }
     }
 }
@@ -56,11 +56,11 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "query": "query\n{\n  location(locationId:9205)\n  {\n    name\n    type\n  }\n}\n",
+    "query": "query\n{\n  location(locationId:17628)\n  {\n    name\n    type\n  }\n}\n",
     "variables": null
 }
 HTTP/1.1 200 OK
-Date: Thu, 16 May 2024 01:32:54 GMT
+Date: Thu, 30 Jan 2025 02:48:40 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
@@ -102,11 +102,11 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "query": "mutation {\n  createCharacter(character: {name: \"Iron Man\", type: \"Marvel\", status: \"Active\", species: \"Human\", gender: \"male\", image: \"Iron.jpeg\", originId: 9205, locationId: 9205}) {\n    id\n  }\n}\n",
+    "query": "mutation {\n  createCharacter(character: {name: \"Iron Man\", type: \"Marvel\", status: \"Active\", species: \"Human\", gender: \"male\", image: \"Iron.jpeg\", originId: 17628, locationId: 17628}) {\n    id\n  }\n}\n",
     "variables": null
 }
 HTTP/1.1 200 OK
-Date: Thu, 16 May 2024 01:32:55 GMT
+Date: Thu, 30 Jan 2025 02:48:42 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
@@ -122,15 +122,15 @@ X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: no-referrer
 X-XSS-Protection: 0
 Content-Type: application/json; charset=utf-8
-Content-Length: 40
-ETag: W/"28-xnIptRTDoZj05pG886x/Yw18AxU"
+Content-Length: 41
+ETag: W/"29-/5LeQuNB8RFSsC6YQVXpu9zKt48"
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "data": {
         "createCharacter": {
-            "id": 7942
+            "id": 12054
         }
     }
 }
@@ -147,11 +147,11 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "query": "query\n{\n  character(characterId:7942)\n  {\n    name\n    type\n    status\n    species\n    gender\n  }\n}\n",
+    "query": "query\n{\n  character(characterId:12054)\n  {\n    name\n    type\n    status\n    species\n    gender\n  }\n}\n",
     "variables": null
 }
 HTTP/1.1 200 OK
-Date: Thu, 16 May 2024 01:32:56 GMT
+Date: Thu, 30 Jan 2025 02:48:43 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
@@ -200,7 +200,7 @@ Body:
     "variables": null
 }
 HTTP/1.1 200 OK
-Date: Thu, 16 May 2024 01:32:57 GMT
+Date: Thu, 30 Jan 2025 02:48:44 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
@@ -216,15 +216,15 @@ X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: no-referrer
 X-XSS-Protection: 0
 Content-Type: application/json; charset=utf-8
-Content-Length: 38
-ETag: W/"26-ickajjVmIzm42ILmQ9ZXIzJIo8U"
+Content-Length: 39
+ETag: W/"27-ik2Moc4HnpWcsWAdZe+WNoKOlYs"
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "data": {
         "createEpisode": {
-            "id": 6258
+            "id": 12637
         }
     }
 }
@@ -241,11 +241,11 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "query": "query\n{\n  episode(episodeId:6258)\n  {\n    name\n    air_date\n  }\n}\n",
+    "query": "query\n{\n  episode(episodeId:12637)\n  {\n    name\n    air_date\n  }\n}\n",
     "variables": null
 }
 HTTP/1.1 200 OK
-Date: Thu, 16 May 2024 01:32:58 GMT
+Date: Thu, 30 Jan 2025 02:48:45 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
@@ -287,11 +287,11 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "query": "mutation {\n  deleteLocations(locationIds:[9205])\n  {\n    locationsDeleted\n  }\n}\n",
+    "query": "mutation {\n  deleteLocations(locationIds:[17628])\n  {\n    locationsDeleted\n  }\n}\n",
     "variables": null
 }
 HTTP/1.1 200 OK
-Date: Thu, 16 May 2024 01:32:59 GMT
+Date: Thu, 30 Jan 2025 02:48:46 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
@@ -332,11 +332,11 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "query": "mutation {\n \n  deleteCharacters(characterIds:[7942])\n  {\n    charactersDeleted\n  }\n}\n",
+    "query": "mutation {\n \n  deleteCharacters(characterIds:[12054])\n  {\n    charactersDeleted\n  }\n}\n",
     "variables": null
 }
 HTTP/1.1 200 OK
-Date: Thu, 16 May 2024 01:33:00 GMT
+Date: Thu, 30 Jan 2025 02:48:47 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
@@ -377,11 +377,11 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "query": "mutation {\n \ndeleteEpisodes(episodeIds:[6258])\n  {\n    episodesDeleted\n  }\n}\n",
+    "query": "mutation {\n \ndeleteEpisodes(episodeIds:[12637])\n  {\n    episodesDeleted\n  }\n}\n",
     "variables": null
 }
 HTTP/1.1 200 OK
-Date: Thu, 16 May 2024 01:33:01 GMT
+Date: Thu, 30 Jan 2025 02:48:48 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
